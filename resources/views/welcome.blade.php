@@ -11,7 +11,7 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    
+
     <div class="container">
     <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12">
@@ -23,7 +23,9 @@
               </div>
               <!-- /.card-header -->
                 <div class="card-body">
-                    <a href="{{ route('employee.index) }}">Employee</a>
+                    <a href="{{ route('employee.index') }}">Employee</a> |
+                    <a href="{{ route('student.view') }}">Student</a>
+
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer"></div>
@@ -33,7 +35,7 @@
         </div><!-- /.row (main row) -->
     </div>
 
-    
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
