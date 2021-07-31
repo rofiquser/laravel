@@ -17,4 +17,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+Route::prefix('student')->group(function(){
+    Route::get('/view',[App\Http\Controllers\StudentController::class,'index'])->name('student.view');
+    Route::get('/add',[App\Http\Controllers\StudentController::class,'show'])->name('student.add');
+    Route::post('/store',[App\Http\Controllers\StudentController::class,'store'])->name('student.store');
+    Route::get('/delete/{id}',[App\Http\Controllers\StudentController::class,'delete'])->name('student.delete');
+
+
+
+
+
+});
+
 Route::get('/employee/index', [App\Http\Controllers\EmployeeController::class, 'index'])->name('employee.index');
