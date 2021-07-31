@@ -20,7 +20,7 @@
             <div class="card">
               <div class="card-header d-flex justify-content-between align-items-center">
                 <h3 class="card-title">All Employee List</h3>
-                <a href="#" class="btn btn-success btn-sm"><i class="fa fa-plus-circle"></i> Add Employee</a>
+                <a href="{{ route('employee.add') }}" class="btn btn-success btn-sm"><i class="fa fa-plus-circle"></i> Add Employee</a>
               </div>
               <!-- /.card-header -->
                 <div class="card-body">
@@ -38,84 +38,21 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($getEmployee as $key=>$value)
                     <tr>
-                        <td>01</td>
-                        <td>Faisal Habib</td>
-                        <td>faisal234@gmail.com</td>
-                        <td>Wordpress</td>
-                        <td>web developer</td>
-                        <td>20000</td>
-                        <td>Dhaka</td>
+                        <td>{{ $key+1 }}</td>
+                        <td>{{ $value->name }}</td>
+                        <td>{{ $value->email }}</td>
+                        <td>{{ $value->department }}</td>
+                        <td>{{ $value->designation }}</td>
+                        <td>{{ $value->salary }}</td>
+                        <td>{{ $value->address }}</td>
                         <td>
                             <a href="#" class="btn btn-sm btn-success">Edit</a>
                             <a href="#" class="btn btn-sm btn-danger">Delete</a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>01</td>
-                        <td>Faisal Habib</td>
-                        <td>faisal234@gmail.com</td>
-                        <td>Wordpress</td>
-                        <td>web developer</td>
-                        <td>20000</td>
-                        <td>Dhaka</td>
-                        <td>
-                            <a href="#" class="btn btn-sm btn-success">Edit</a>
-                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>01</td>
-                        <td>Faisal Habib</td>
-                        <td>faisal234@gmail.com</td>
-                        <td>Wordpress</td>
-                        <td>web developer</td>
-                        <td>20000</td>
-                        <td>Dhaka</td>
-                        <td>
-                            <a href="#" class="btn btn-sm btn-success">Edit</a>
-                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>01</td>
-                        <td>Faisal Habib</td>
-                        <td>faisal234@gmail.com</td>
-                        <td>Wordpress</td>
-                        <td>web developer</td>
-                        <td>20000</td>
-                        <td>Dhaka</td>
-                        <td>
-                            <a href="#" class="btn btn-sm btn-success">Edit</a>
-                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>01</td>
-                        <td>Faisal Habib</td>
-                        <td>faisal234@gmail.com</td>
-                        <td>Wordpress</td>
-                        <td>web developer</td>
-                        <td>20000</td>
-                        <td>Dhaka</td>
-                        <td>
-                            <a href="#" class="btn btn-sm btn-success">Edit</a>
-                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>01</td>
-                        <td>Faisal Habib</td>
-                        <td>faisal234@gmail.com</td>
-                        <td>Wordpress</td>
-                        <td>web developer</td>
-                        <td>20000</td>
-                        <td>Dhaka</td>
-                        <td>
-                            <a href="#" class="btn btn-sm btn-success">Edit</a>
-                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
-                        </td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
                 </div>
