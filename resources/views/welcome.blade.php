@@ -23,7 +23,7 @@
               </div>
               <!-- /.card-header -->
                 <div class="card-body">
-                    <a href="{{ route('employee.index) }}">Employee</a>
+                    <a href="{{ route('employee.index') }}">Employee</a>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer"></div>
